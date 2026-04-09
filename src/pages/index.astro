@@ -3,13 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import HeroImageScroll from "../components/sections/Hero-image-scroll.astro";
 
-import directus from "../lib/directus";
-import { readSingleton } from "@directus/sdk";
+// import directus from "../lib/directus";
+// import { readSingleton } from "@directus/sdk";
 
-const homePage = await directus.request(readSingleton("home_page"));
 ---
 
 <Layout>
   <Header />
-  <HeroImageScroll title={homePage.title} />
+  <HeroImageScroll title={'Заголовок'} />
 </Layout>
